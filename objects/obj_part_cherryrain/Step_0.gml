@@ -1,0 +1,1 @@
+part_particles_create( global.partsys_bg, random( 640 ), -50, global.parttype[ PART_CHERRYRAIN ], 1 );
