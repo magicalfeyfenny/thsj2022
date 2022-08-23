@@ -1,0 +1,5 @@
+hp -= SHOT_FLAME_DAMAGE;
+
+
+
+

@@ -1,3 +1,11 @@
+title_xscale = 1 / max(1, fade_in_time );
+title_yscale = 1 / max(1, fade_in_time );
+
+title_angle = 10 * dsin( fade_in_time );
+
+fade_in_time -= 1;
+
+
 title_switch_timer -= 1;
 
 if (title_switch_timer <= 0 && title_mode == TITLE_MODE_START_FADEIN ) {
@@ -20,7 +28,7 @@ if (title_mode == TITLE_MODE_MENU_READY ) {
 	menu_wait--;
 	var input_up = scr_input_get( INPUT_UP );
 	var input_down = scr_input_get( INPUT_DOWN );
-	var input_select = ( scr_input_get( INPUT_SHOT_LEFT ) || scr_input_get(INPUT_SHOT_RIGHT) );
+	var input_select = ( scr_input_get( INPUT_BOMB) );
 
 	if (input_up ) {
 		if (menu_wait < 0) {
@@ -56,6 +64,9 @@ if ( input_select ) {
 		}
 	}
 }
+
+
+
 
 
 

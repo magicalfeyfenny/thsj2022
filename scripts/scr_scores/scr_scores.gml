@@ -22,7 +22,7 @@ function scr_scores( _mode ) {
 		case SCORE_WRITE:
 			if ( file_exists( working_directory + "scores.txt" ) ) {
 				var file = file_text_open_append( working_directory + "scores.txt" );
-				file_text_write_real( file, obj_player.score_current );
+				file_text_write_real( file, obj_player_cirno.score_current );
 				file_text_writeln(file);
 				file_text_close(file);
 			}
@@ -40,4 +40,5 @@ function scr_scores( _mode ) {
 			return -1;
 	}
 }
+
 

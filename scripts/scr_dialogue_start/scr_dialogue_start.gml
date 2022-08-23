@@ -7,10 +7,14 @@ function scr_dialogue_start( _filename ) {
 	if (!instance_exists(obj_dialogue) ) {
 		return -1;
 	}
+	
+//VERSION 2 FILE FORMAT - new variable bg_test
+//NOT COMPATIBLE WITH PRIOR DIALOGUE SCRIPTS (Wriggle, Sunflowers)
 		
 //file format for dialogue:
 /*
 	last_active			{int}		active_test
+	bg_id				{int}		bg_test
 	actor_left_emote	{int}		emote_test
 	actor_left			{string}	name_test
 	actor_right_emote	{int}		emote_test
@@ -30,6 +34,7 @@ function scr_dialogue_start( _filename ) {
 
 	//clear all queues
 	ds_queue_clear( obj_dialogue.active_test );
+	ds_queue_clear( obj_dialogue.bg_test);
 	ds_queue_clear( obj_dialogue.emote_test );
 	ds_queue_clear( obj_dialogue.name_test );
 	ds_queue_clear( obj_dialogue.text_test );
@@ -40,6 +45,8 @@ function scr_dialogue_start( _filename ) {
 	//enqueue dialogue
 	while (!file_text_eof(file) ) {
 		ds_queue_enqueue( obj_dialogue.active_test, file_text_read_real(file) );
+		file_text_readln(file);
+		ds_queue_enqueue( obj_dialogue.bg_test, file_text_read_real(file) );
 		file_text_readln(file);
 		ds_queue_enqueue( obj_dialogue.emote_test, file_text_read_real(file) );
 		file_text_readln(file);
@@ -68,4 +75,5 @@ function scr_dialogue_start( _filename ) {
 	obj_dialogue.spewlength = 0;
 	obj_dialogue.last_active = LEFT;
 	obj_dialogue.text_advance_ready = TEXT_LOADING;
+	obj_dialogue.bg_id = BG_NONE;
 }

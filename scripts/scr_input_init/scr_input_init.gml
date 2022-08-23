@@ -10,14 +10,14 @@ function scr_input_init() {
 		global.keyboard = ds_map_create();
 	}
 	
-	global.keyboard[? INPUT_UP]				= vk_up;
-	global.keyboard[? INPUT_DOWN]			= vk_down;
-	global.keyboard[? INPUT_LEFT]			= vk_left;
-	global.keyboard[? INPUT_RIGHT]			= vk_right;
-	global.keyboard[? INPUT_SHOT_LEFT]		= ord("Z");
-	global.keyboard[? INPUT_SHOT_RIGHT]		= ord("C");
+	global.keyboard[? INPUT_UP]				= ord("W");
+	global.keyboard[? INPUT_DOWN]			= ord("S");
+	global.keyboard[? INPUT_LEFT]			= ord("A");
+	global.keyboard[? INPUT_RIGHT]			= ord("D");
+	global.keyboard[? INPUT_SHOT_LEFT]		= ord("Q");
+	global.keyboard[? INPUT_SHOT_RIGHT]		= ord("E");
 	global.keyboard[? INPUT_FOCUS]			= vk_shift;
-	global.keyboard[? INPUT_BOMB]			= ord("X");
+	global.keyboard[? INPUT_BOMB]			= ord("F");
 	global.keyboard[? INPUT_PAUSE]			= vk_escape;
 	global.keyboard[? INPUT_ANY]			= vk_anykey;
 	
@@ -68,4 +68,6 @@ function scr_input_init() {
 		ds_map_read( global.options, input_string );
 	}
 */
+
+
 

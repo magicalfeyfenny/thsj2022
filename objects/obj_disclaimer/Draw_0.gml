@@ -10,21 +10,24 @@ draw_text_color( 320, 30,		"The following is a fan-created derivative work of To
 				
 draw_set_font( fn_textsmall );
 draw_set_halign( fa_center );
-draw_text_color( 320, 230,	"JAM DEVELOPMENT BUILD", c_teal, c_teal, c_aqua, c_aqua, alpha_cycle);
+draw_text_color( 320, 230,	"JAM RELEASE BUILD", c_teal, c_teal, c_aqua, c_aqua, alpha_cycle);
 
 draw_set_halign( fa_right );
-draw_text_color( 630, 260,		"studio_tiny_leaf:\n"
-							+	"https://fenny.space\n"
-							+	"twitter: @magicalfeyfenny\n\n"
+draw_text_color( 630, 260,		"\n\n\n\n"
 							+	"Team Shanghai Alice:\n"
 							+	"https://touhou-project.news/\n"
 							, c_teal, c_teal, c_aqua, c_aqua, alpha_cycle);
 
 draw_set_halign( fa_left );
-draw_text_color( 10, 260,		"\n"
+draw_text_color( 10, 260,		""
+							+	"https://fenny.space\n"
+							+	"https://magicalfeyfenny.itch.io\n"
+							+	"twitter: @magicalfeyfenny\n"
+							+   "\n"
 							+	"Source code:\n" 
-							+	"https://git.fenny.space/magicalfeyfenny/thsj2022\n\n"
-							+	"Download this game from itch.io!\n"
-							+	"https://magicalfeyfenny.itch.io/thsj2022placeholder\n"
+							+	"https://git.fenny.space/magicalfeyfenny/thsj2022\n"
 						, c_teal, c_teal, c_aqua, c_aqua, alpha_cycle);
+
+
+
 

@@ -39,6 +39,10 @@
 	#macro SCORE_INIT 2
 	#macro SCORE_ZERO 0
 	
+	//particle systems
+	#macro PART_EMIT_CHERRYRAIN 0
+	#macro PART_TYPE_CHERRYFOUNTAIN 0
+	
 	//title
 	#macro TITLE_MENU_CHOICES 2
 //	#macro TITLE_MENU_TEXT_CONTINUE "Continue"
@@ -70,49 +74,36 @@
 	#macro EMOTE_OUCH 5
 	#macro LEFT_ACTOR 0
 	#macro RIGHT_ACTOR 1
+	#macro NARRATOR 2
+	#macro BG_NONE 0
+	#macro BG_TEST 1
+	#macro BG_MISTYLAKE 2
+	#macro BG_SDM 3
+	#macro BG_FAIR 4
+	
+	//cutscene
+	#macro CUTSCENE_NOSCENE 0
+	#macro CUTSCENE_OPENING 1	
+	#macro CUTSCENE_FINAL 4
+	
+	//scoring
+	#macro RANK_UNRANKED 0
+	#macro RANK_E_EASY 1
+	#macro RANK_D_DUMMY 2
+	#macro RANK_C_CUTIE 3
+	#macro RANK_B_BAKA 4
+	#macro RANK_A_ALIEN 5
+	#macro RANK_S_SWEET 6
+	#macro RANK_SS_SILLY_SPRITE 7
+	#macro RANK_SSS_SMOKIN_STYLIN_SISTER 8
 	
 	//player	
 	#macro SPAWN_X 60
 	#macro SPAWN_Y 180
 	#macro FOCUS_SPEED 3
 	#macro UNFOC_SPEED 6
-	#macro SHOT_SPEED 8
-	
-	#macro SHOT_NORMAL_DELAY 5
-	#macro SHOT_NORMAL_DAMAGE 5
-	#macro SHOT_NORMAL_SPEED 8
-	#macro SHOT_NORMAL_LIFETIME 50
-	#macro SHOT_FLAME_DELAY 2
-	#macro SHOT_FLAME_DAMAGE 0.5
-	#macro SHOT_FLAME_SPEED 10
-	#macro SHOT_FLAME_FRICTION 0.3
-	#macro SHOT_FLAME_LIFETIME 30
-	#macro SHOT_LASER_DELAY 30
-	#macro SHOT_LASER_LIFETIME 90
-	#macro SHOT_LASER_DAMAGE 1
-	#macro SHOT_LASER_ARM 20
-	#macro SHOT_MISSILE_DELAY 5
-	#macro SHOT_MISSILE_DAMAGE 8
-	#macro SHOT_MISSILE_SPEED 8
-	#macro SHOT_MISSILE_TARGET_DELAY 6
-	#macro SHOT_MISSILE_LIFETIME 50
-	
-	#macro PLAYER_POWERUP_NORMAL 0
-	#macro PLAYER_POWERUP_FLAMES 1
-	#macro PLAYER_POWERUP_LASER 2
-	#macro PLAYER_POWERUP_MISSILE 3
 	
 	
-	//cutscene
-	#macro CUTSCENE_NOSCENE 0
-	#macro CUTSCENE_OPENING 1
-	#macro CUTSCENE_MIDBOSS 2
-	#macro CUTSCENE_BOSS 3
-	#macro CUTSCENE_FINAL 4
-	
-	//particle systems
-	#macro PART_EMIT_CHERRYRAIN 0
-	#macro PART_TYPE_CHERRYFOUNTAIN 0
 	
 #endregion
 
@@ -125,5 +116,8 @@ function scr_initialize() {
 	global.cutscene_number = CUTSCENE_NOSCENE;
 	global.dialogue_mode = false;
 	global.combat_mode = false;
+	window_set_cursor(cr_none);
 	scr_particles_init();
 }
+
+

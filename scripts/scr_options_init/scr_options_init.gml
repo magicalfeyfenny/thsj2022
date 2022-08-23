@@ -55,9 +55,13 @@ function scr_options_init(){
 		window_set_fullscreen(true);
 		view_set_hport(view_current, WINDOW_BASE_HEIGHT * global.options[? OPTIONS_FULLMULT]);
 		view_set_wport(view_current, WINDOW_BASE_WIDTH * global.options[? OPTIONS_FULLMULT]);
+		window_set_cursor(cr_none);
+		cursor_sprite = asset_get_index( "spr_cursor_" + string(WINDOW_BASE_HEIGHT * global.options[? OPTIONS_FULLMULT]) );
 	} else {
 		window_set_fullscreen(false);
 		view_set_hport(view_current, WINDOW_BASE_HEIGHT * global.options[? OPTIONS_WINDOWMULT]);
 		view_set_wport(view_current, WINDOW_BASE_WIDTH * global.options[? OPTIONS_WINDOWMULT]);
+		cursor_sprite = asset_get_index( "spr_cursor_" + string(WINDOW_BASE_HEIGHT * global.options[? OPTIONS_FULLMULT]) );
+		window_set_cursor(cr_none);
 	}
 }
