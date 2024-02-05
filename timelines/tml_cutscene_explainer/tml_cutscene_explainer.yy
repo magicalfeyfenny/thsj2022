@@ -1,14 +1,13 @@
 {
+  "resourceType": "GMTimeline",
+  "resourceVersion": "1.0",
+  "name": "tml_cutscene_explainer",
   "momentList": [
-    {"moment":1,"evnt":{"isDnD":false,"eventNum":1,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMMoment",},
-    {"moment":30,"evnt":{"isDnD":false,"eventNum":30,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMMoment",},
+    {"resourceType":"GMMoment","resourceVersion":"1.0","name":"","evnt":{"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":0,"isDnD":false,},"moment":1,},
+    {"resourceType":"GMMoment","resourceVersion":"1.0","name":"","evnt":{"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":30,"eventType":0,"isDnD":false,},"moment":30,},
   ],
   "parent": {
     "name": "thsj2022",
     "path": "thsj2022.yyp",
   },
-  "resourceVersion": "1.0",
-  "name": "tml_cutscene_explainer",
-  "tags": [],
-  "resourceType": "GMTimeline",
 }
